@@ -13,21 +13,32 @@ export default function Camera(props) {
 
     const offset = scroll.offset 
     const presencia = Math.sin(offset * Math.PI)
-    
+    const isMobile = viewport.width < 5
+
+    // 1. ROTACIÓN
     groupRef.current.rotation.y = offset * Math.PI * 2 
     groupRef.current.rotation.x = 0.1 + (presencia * 0.2) 
     groupRef.current.rotation.z = -0.05 
 
-    groupRef.current.position.x = -2.5 
+    // 2. POSICIÓN X
+    groupRef.current.position.x = isMobile ? 0 : -2.5 
     
-    const flotacion = Math.sin(state.clock.elapsedTime * 2) * 0.1 
-    groupRef.current.position.y = -viewport.height + flotacion
+    // 3. POSICIÓN Y
+    const flotacion = Math.sin(state.clock.elapsedTime * 2) * 0.1
+
+    groupRef.current.position.y = isMobile 
+      ? -viewport.height - 1.5 + flotacion 
+      : -viewport.height - (viewport.height * 0.10) + flotacion
+
+    // 4. POSICIÓN Z
     groupRef.current.position.z = -3 + (presencia * 2.5) 
+
+    // 5. RESPONSIVVE
+    groupRef.current.scale.setScalar(isMobile ? 0.05 : 0.09)
   })
 
   return (
     <group ref={groupRef} {...props} dispose={null}>
-      
       <PresentationControls 
         global={false}
         cursor={true}
@@ -42,10 +53,8 @@ export default function Camera(props) {
           name="Object_8" 
           geometry={nodes.Object_8.geometry} 
           material={materials.Camera} 
-          scale={0.09} 
         />
       </PresentationControls>
-
     </group>
   )
 }
