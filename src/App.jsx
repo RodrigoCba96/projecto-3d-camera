@@ -39,26 +39,26 @@ function App() {
 
             <Scroll html style={{ width: '100%', fontFamily: 'sans-serif' }}>
               
-              {/* sec 1 */}
-              <div style={{ position: 'absolute', top: '20vh', left: '10vw' }}>
-                <h1 style={{ fontSize: '4rem', margin: 0, color: '#111' }}>Siempre dispara<br/>como un <b>Pro</b>.</h1>
-                <p style={{ fontSize: '1.2rem', color: '#555', maxWidth: '400px' }}>
+             {/* sec 1 */}
+              <div style={{ position: 'absolute', top: '20vh', left: '10vw', width: '80vw', maxWidth: '400px' }}>
+                <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', margin: 0, color: '#111' }}>Siempre dispara<br/>como un <b>Pro</b>.</h1>
+                <p style={{ fontSize: 'clamp(1rem, 4vw, 1.2rem)', color: '#555' }}>
                   Descubre nuestro lente más avanzado. Baja para explorar la tecnología detrás del cristal.
                 </p>
               </div>
 
              {/* sec 2 */}
-            <div style={{ position: 'absolute', top: '130vh', right: '10vw', textAlign: 'right' }}>
-               <h2 style={{ fontSize: '3rem', margin: 0, color: '#111' }}>Resolución<br/>Definitiva.</h2>
-               <p style={{ fontSize: '1.2rem', color: '#555', maxWidth: '400px', marginLeft: 'auto' }}>
+            <div style={{ position: 'absolute', top: '130vh', right: '10vw', width: '80vw', maxWidth: '400px', textAlign: 'right' }}>
+               <h2 style={{ fontSize: 'clamp(2rem, 8vw, 3rem)', margin: 0, color: '#111' }}>Resolución<br/>Definitiva.</h2>
+               <p style={{ fontSize: 'clamp(1rem, 4vw, 1.2rem)', color: '#555', marginLeft: 'auto' }}>
                   Sensor CMOS Full-Frame de 61 Megapíxeles impulsado por Inteligencia Artificial. Captura en 8K RAW con un rango dinámico que desafía a la realidad.
                </p>
             </div>
 
-              {/* sec 3*/}
-              <div style={{ position: 'absolute', top: '230vh', left: '10vw' }}>
-                <h2 style={{ fontSize: '3rem', margin: 0, color: '#111' }}>Nuestro<br/>Legado.</h2>
-                <p style={{ fontSize: '1.2rem', color: '#555', maxWidth: '400px' }}>
+              {/* sec 3 */}
+              <div style={{ position: 'absolute', top: '230vh', left: '10vw', width: '80vw', maxWidth: '400px' }}>
+                <h2 style={{ fontSize: 'clamp(2rem, 8vw, 3rem)', margin: 0, color: '#111' }}>Nuestro<br/>Legado.</h2>
+                <p style={{ fontSize: 'clamp(1rem, 4vw, 1.2rem)', color: '#555' }}>
                   Construida para durar generaciones. Siente el peso de la historia en cada disparo mecánico, sin baterías, pura artesanía.
                 </p>
               </div>
@@ -88,7 +88,6 @@ function App() {
                     style={{ 
                       color: '#111',
                       textDecoration: 'none', 
-                      fontWeight: 'bold'
                     }}
                   >
                     RODRIGO CORDOBA
@@ -113,5 +112,4 @@ function App() {
     </div>
   )
 }
-
 export default App
