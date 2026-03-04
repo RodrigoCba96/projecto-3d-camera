@@ -2,6 +2,7 @@ import { Canvas } from '@react-three/fiber'
 import { Suspense } from 'react'
 import { ScrollControls, Scroll, Environment } from '@react-three/drei'
 import Lente from './Lente'
+import Camera from './Camera'
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
             
             {/* 1. EL CONTENIDO 3D */}
             <Scroll>
-              <Lente />
+              <Lente/>
+              <Camera/>
             </Scroll>
 
             {/* 2. EL CONTENIDO HTML (Textos) */}
