@@ -109,7 +109,7 @@ function App() {
             </Scroll>
           </ScrollControls>
         </Suspense>
-      </Canvas> {/* <-- ¡Esta es la etiqueta que te faltaba! */}
+      </Canvas>
     </div>
   )
 }
